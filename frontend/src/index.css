@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* Background and Layout */
+body {
+  @apply text-gray-900 flex justify-center items-center min-h-screen;
+  background: linear-gradient(135deg, #F4A261, #E76F51); /* Light brick gradient */
+}
+
+/* Glassmorphic Card */
+.glass-card {
+  @apply bg-white/20 backdrop-blur-lg shadow-lg rounded-xl p-6 my-8 border border-white/30;
+  max-width: 450px; /* Increased width */
+  min-height: auto; /* Reduced height */
+}
+
+/* Buttons */
+.btn-primary {
+  @apply bg-[#2A9D8F] hover:bg-[#21867A] text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out shadow-md flex items-center;
+}
+.btn-primary:disabled {
+  @apply bg-gray-400 cursor-not-allowed;
+}
+
+/* Animated Loading Spinner */
+.spinner {
+  @apply animate-spin rounded-full border-4 border-white border-t-transparent h-5 w-5 inline-block;
+}
+
+/* Coupon List Item */
+.coupon-item {
+  @apply flex justify-between items-center p-3 bg-white/70 shadow-md rounded-lg transition hover:shadow-lg;
+}
+
+/* Coupon Hover Effect */
+.coupon-item:hover {
+  @apply scale-105 transition-transform duration-200;
+}
