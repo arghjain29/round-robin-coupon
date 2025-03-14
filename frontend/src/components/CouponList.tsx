@@ -42,32 +42,34 @@ const CouponList = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-brick px-4">
-          <div className="glass-card w-[480px] p-8 rounded-lg shadow-lg">
-            <h2 className="text-3xl font-bold text-center mb-6">🎟 Available Coupons</h2>
-      
-            {loading ? (
-              <div className="flex justify-center items-center">
-                <span className="spinner"></span>
-              </div>
-            ) : coupons.length === 0 ? (
-              <p className="text-center text-gray-700">No available coupons.</p>
-            ) : (
-              <ul className="space-y-3">
-                {coupons.map((coupon) => (
-                  <li key={coupon._id} className="coupon-item">
-                    <span className="text-lg font-medium">{coupon.code}</span>
-                    <button onClick={() => handleClaim(coupon._id)} className="btn-primary">
-                      Claim
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
+      <div className="flex items-center justify-center min-h-screen bg-brick px-4">
+        <div className="glass-card w-full max-w-[480px] p-6 sm:p-8 rounded-lg shadow-lg">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-6">
+            🎟 Available Coupons
+          </h2>
+    
+          {loading ? (
+            <div className="flex justify-center items-center">
+              <span className="spinner"></span>
+            </div>
+          ) : coupons.length === 0 ? (
+            <p className="text-center text-gray-700">No available coupons.</p>
+          ) : (
+            <ul className="space-y-3">
+              {coupons.map((coupon) => (
+                <li key={coupon._id} className="coupon-item">
+                  <span className="text-sm sm:text-lg font-medium">{coupon.code}</span>
+                  <button onClick={() => handleClaim(coupon._id)} className="btn-primary">
+                    Claim
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
-      );
-      
+      </div>
+    );
+    
 };
 
 export default CouponList;

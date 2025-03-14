@@ -4,19 +4,28 @@
 body {
   @apply text-gray-900 flex justify-center items-center min-h-screen;
   background: linear-gradient(135deg, #F4A261, #E76F51); /* Light brick gradient */
+  padding: 10px;
 }
 
 /* Glassmorphic Card */
 .glass-card {
-  @apply bg-white/20 backdrop-blur-lg shadow-lg rounded-xl p-6 my-8 border border-white/30;
-  max-width: 450px; /* Increased width */
-  min-height: auto; /* Reduced height */
+  @apply bg-white/20 backdrop-blur-lg shadow-lg rounded-xl border border-white/30;
+  width: 100%;
+  max-width: 480px; /* Max width for larger screens */
+  padding: 1.5rem;
+}
+
+/* Headings */
+h2 {
+  @apply text-xl sm:text-3xl text-center font-bold text-gray-900 mb-4 sm:mb-6;
 }
 
 /* Buttons */
 .btn-primary {
   @apply bg-[#2A9D8F] hover:bg-[#21867A] text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out shadow-md flex items-center;
+  font-size: 14px;
 }
+
 .btn-primary:disabled {
   @apply bg-gray-400 cursor-not-allowed;
 }
@@ -28,10 +37,28 @@ body {
 
 /* Coupon List Item */
 .coupon-item {
-  @apply flex justify-between items-center p-3 bg-white/70 shadow-md rounded-lg transition hover:shadow-lg;
+  @apply flex justify-between items-center p-2 sm:p-3 bg-white/70 shadow-md rounded-lg transition hover:shadow-lg;
+  font-size: 14px;
 }
 
 /* Coupon Hover Effect */
 .coupon-item:hover {
   @apply scale-105 transition-transform duration-200;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .glass-card {
+    @apply p-4; /* Reduce padding for mobile */
+  }
+  
+  .coupon-item {
+    @apply p-2; /* Reduce padding for mobile */
+    font-size: 12px; /* Adjust font size for mobile */
+  }
+  
+  .btn-primary {
+    font-size: 12px; /* Smaller buttons */
+    padding: 8px 12px;
+  }
 }
