@@ -1,7 +1,7 @@
-import Coupon from "../models/Coupon.js";
+import Coupon from "../models/coupon.js";
 import ClaimRecord from "../models/ClaimRecord.js";
 import { getClientIP, getBrowserId } from "../middleware/abusePrevention.js";
-import e from "express";
+
 
 export const getAvailableCoupons = async (req, res) => {
   try {
