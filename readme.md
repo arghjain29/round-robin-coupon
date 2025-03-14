@@ -92,6 +92,12 @@ npm install
 npm run dev
 ```
 
+Create a `.env` file in the `frontend/` directory and configure:
+
+```env
+VITE_BACKEND_URL=your_backend_url
+```
+
 ## 🎯 API Endpoints
 
 | Method | Endpoint                | Description             | Auth |
@@ -116,7 +122,8 @@ withCredentials: true
 
 ## 🎨 UI Preview
 
-(Add Screenshot of UI)
+![image](https://github.com/user-attachments/assets/5f84a7ab-8a68-46c7-a170-8b2c7f2c1b6e)
+
 
 ## 📢 To-Do & Future Enhancements
 
