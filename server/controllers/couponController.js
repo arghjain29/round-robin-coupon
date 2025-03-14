@@ -1,4 +1,4 @@
-import Coupon from "../models/coupon.js";
+import Coupon from "../models/Coupon.js";
 import ClaimRecord from "../models/ClaimRecord.js";
 import { getClientIP, getBrowserId } from "../middleware/abusePrevention.js";
 
