@@ -4,8 +4,8 @@ A full-stack web application that allows users to claim coupons through a fair r
 
 ## 🚀 Live Demo
 
-- **Frontend:** Deployed on Vercel[https://round-robin-coupon.vercel.app/]
-- **Backend:** Deployed on Vercel[https://round-robin-coupon-server-seven.vercel.app/]
+- **Frontend:** Deployed on Vercel [https://round-robin-coupon.vercel.app/]
+- **Backend:** Deployed on Vercel [https://round-robin-coupon-server-seven.vercel.app/]
 
 ## ✨ Features
 
